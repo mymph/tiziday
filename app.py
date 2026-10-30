@@ -309,7 +309,7 @@ html(f'<div class="baloes">{baloes_html}</div>')
 desde, ate = dias_desde_e_ate_aniversario()
 em_festa = desde <= DIAS_DE_PARABENS_ATRASADO
 
-if desde == 0:
+'''if desde == 0:
     texto_pilula = "Hoje é o seu dia! 🧁"
 elif em_festa:
     plural = "dia" if desde == 1 else "dias"
@@ -317,7 +317,9 @@ elif em_festa:
 elif ate == 1:
     texto_pilula = "Falta 1 dia para o seu aniversário"
 else:
-    texto_pilula = f"Faltam {ate} dias para o seu aniversário"
+    texto_pilula = f"Faltam {ate} dias para o seu aniversário"'''
+
+texto_pilula = "Atrasei 1 dia, mas o carinho chegou inteirinho"
 
 html(
     f"""

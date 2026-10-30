@@ -32,7 +32,7 @@ PLANOS = [
     ("🍊", "Laranjada no Centro"),
     ("🍻", "Tomar umas no bar do Bill"),
     ("🛍️", "Comprinhas em Madureira"),
-    ("🏖️", "Praia da Barra com havaianas"),
+    ("🏖️", "Praia da Barra de havaianas"),
     ("🏟️", "Conhecer o Maracanã"),
     ("⭐", "E infinitas possibilidades!"),
 ]

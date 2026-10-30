@@ -9,27 +9,23 @@ import streamlit as st
 NOME_NO_SITE = "Tizi"
 DIA_ANIVERSARIO = 29
 MES_ANIVERSARIO = 10
-ASSINATURA = "Lívia"
+ASSINATURA = "Letícia Lívia"
 
 # Nos dias seguintes ao aniversário, o site mostra "Atrasei X dias" em vez da contagem.
 DIAS_DE_PARABENS_ATRASADO = 10
 
 CARTA = """
-Letícia, feliz aniversário!
+Minha querida Letícia Lacerda,
 
-Apesar de AINDA não termos nos encontrado pessoalmente, isso nunca diminuiu
-o carinho que sinto por você, muito menos a proximidade que sinto quando
-conversamos. Queria te dar algo feito com cuidado e carinho, e este cantinho
-é uma pequena forma de demonstrar o quanto você é importante pra mim.
+Feliz aniversário!
 
-Fico genuinamente feliz e empolgada só de imaginar todos esses planos que
-você já fez para nós, caso finalmente aconteça de nos encontrarmos. E,
-sinceramente, independentemente do programa, o que mais quero é ter você por
-perto e compartilhar esses momentos contigo.
+Apesar de AINDA não termos nos encontrado pessoalmente, isso nunca diminuiu o carinho enorme que sinto por você, muito menos a proximidade que sinto sempre que conversamos. Queria te dar algo feito com muito cuidado e carinho, e este cantinho é uma pequena forma de demonstrar o quanto você é especial e importante pra mim.
 
-Espero que a vida seja mais gentil com você, que nunca faltem motivos para
-sorrir, pessoas que te façam bem e experiências que aqueçam seu coração. 
-Você merece tantas coisas bonitas! Você é luz! ❤️
+Fico genuinamente feliz e empolgada só de imaginar os planos que temos para nós e que espero, do fundo do meu coração, que a gente consiga tirar do papel. Mal posso esperar para transformar essas ideias em lembranças, conhecer lugares juntas, fazer nossas comprinhas e viver todos aqueles momentos que, por enquanto, só conseguimos imaginar. E, sinceramente, independentemente do programa, o que mais quero é ter você por perto e aproveitar sua companhia.
+
+Espero que a vida seja cada vez mais gentil com você, que nunca faltem motivos para sorrir, pessoas que te façam bem e experiências que aqueçam seu coração. Que você receba todo o carinho e a bondade que espalha por aí, porque merece cada pedacinho disso.
+
+Tenho muita sorte de ter você na minha vida. Você é luz! 💗
 """
 
 PLANOS = [
@@ -37,9 +33,10 @@ PLANOS = [
     ("🍻", "Tomar umas no bar do Bill"),
     ("🛍️", "Comprinhas em Madureira"),
     ("🏖️", "Praia da Barra com havaianas"),
-    ("✨", "E tudo mais que a gente inventar"),
+    ("🏟️", "Conhecer o Maracanã"),
+    ("⭐", "E infinitas possibilidades!"),
 ]
-FRASE_PLANOS = "O que importa mesmo é a companhia."
+FRASE_PLANOS = "O que importa mesmo é a sua companhia."
 
 MOTIVOS = [
     "Você faz qualquer dia ficar mais leve.",
@@ -63,7 +60,7 @@ MENSAGEM_FINAL = (
 
 st.set_page_config(
     page_title=f"Feliz aniversário, {NOME_NO_SITE}!",
-    page_icon="🎂",
+    page_icon="🌸🧁",
     layout="centered",
 )
 
@@ -265,11 +262,11 @@ CSS = """
 """
 
 BALOES = [
-    ("🎈", 6, 17, -4),
+    ("🎀", 6, 17, -4),
     ("🌸", 22, 21, -12),
-    ("🎈", 38, 15, -8),
-    ("✨", 55, 19, -2),
-    ("🎈", 70, 23, -15),
+    ("🐇", 38, 15, -8),
+    ("☁️", 55, 19, -2),
+    ("🧸", 70, 23, -15),
     ("🌷", 84, 16, -6),
     ("🎈", 94, 20, -10),
 ]
@@ -313,7 +310,7 @@ desde, ate = dias_desde_e_ate_aniversario()
 em_festa = desde <= DIAS_DE_PARABENS_ATRASADO
 
 if desde == 0:
-    texto_pilula = "Hoje é o seu dia! 🎂"
+    texto_pilula = "Hoje é o seu dia! 🧁"
 elif em_festa:
     plural = "dia" if desde == 1 else "dias"
     texto_pilula = f"Atrasei {desde} {plural}, mas o carinho chegou inteirinho"
@@ -361,7 +358,7 @@ html('<div class="secao">Mais uma coisinha</div>')
 if st.button("Abrir a surpresa"):
     st.session_state["surpresa"] = True
     st.balloons()
-    st.toast(f"Parabéns, {NOME_NO_SITE}!", icon="🎂")
+    st.toast(f"Parabéns, {NOME_NO_SITE}!", icon="🧁")
 
 if st.session_state.get("surpresa"):
     html(f'<div class="final">{MENSAGEM_FINAL}</div>')

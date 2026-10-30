@@ -19,13 +19,13 @@ Minha querida Letícia Lacerda,
 
 Feliz aniversário!
 
-Apesar de AINDA não termos nos encontrado pessoalmente, isso nunca diminuiu o carinho enorme que sinto por você, muito menos a proximidade que sinto sempre que conversamos. Queria te dar algo feito com muito cuidado e carinho, e este cantinho é uma pequena forma de demonstrar o quanto você é especial e importante pra mim.
+Apesar de ainda não termos nos encontrado pessoalmente, isso nunca diminuiu o carinho enorme que sinto por você, muito menos a proximidade que sinto sempre que conversamos. Queria te dar algo feito com muito cuidado e carinho, e este cantinho é uma pequena forma de demonstrar o quanto você é especial e importante pra mim.
 
 Fico genuinamente feliz e empolgada só de imaginar os planos que temos para nós e que espero, do fundo do meu coração, que a gente consiga tirar do papel. Mal posso esperar para transformar essas ideias em lembranças, conhecer lugares juntas, fazer nossas comprinhas e viver todos aqueles momentos que, por enquanto, só conseguimos imaginar. E, sinceramente, independentemente do programa, o que mais quero é ter você por perto e aproveitar sua companhia.
 
 Espero que a vida seja cada vez mais gentil com você, que nunca faltem motivos para sorrir, pessoas que te façam bem e experiências que aqueçam seu coração. Que você receba todo o carinho e a bondade que espalha por aí, porque merece cada pedacinho disso.
 
-Tenho muita sorte de ter você na minha vida. Você é luz! 💗
+Tenho muita sorte de ter você na minha vida. Você é luz! 🩷
 """
 
 PLANOS = [
@@ -60,7 +60,7 @@ MENSAGEM_FINAL = (
 
 st.set_page_config(
     page_title=f"Feliz aniversário, {NOME_NO_SITE}!",
-    page_icon="🌸🧁",
+    page_icon="🧁",
     layout="centered",
 )
 
@@ -263,12 +263,12 @@ CSS = """
 
 BALOES = [
     ("🎀", 6, 17, -4),
-    ("🌸", 22, 21, -12),
-    ("🐇", 38, 15, -8),
+    ("🐇", 22, 21, -12),
+    ("🌸", 38, 15, -8),
     ("☁️", 55, 19, -2),
     ("🧸", 70, 23, -15),
     ("🌷", 84, 16, -6),
-    ("🎈", 94, 20, -10),
+    ("🫧", 94, 20, -10),
 ]
 
 
@@ -329,7 +329,7 @@ html(
 
 if em_festa and not st.session_state.get("festa_iniciada"):
     st.session_state["festa_iniciada"] = True
-    st.balloons()
+    #st.balloons()
 
 # ---------------- Carta ----------------
 paragrafos = "".join(f"<p>{p.strip()}</p>" for p in CARTA.strip().split("\n\n"))
